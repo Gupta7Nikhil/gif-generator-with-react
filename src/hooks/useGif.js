@@ -18,7 +18,7 @@ const useGif = (tag) => {
       
       const {data} = await axios.get(tag ? `${url}&tag=${tag}`  : url);
       const imageSource = data.data.images.downsized_large.url;
-      setGif(imageSource);
+      setGif(imageSource ?? "https://media3.giphy.com/media/VWEKSiX3SFH7G/giphy.gif?cid=2e783e0804ab160280aad305a214de5114cefc8e71f60bab&ep=v1_gifs_random&rid=giphy.gif&ct=g");
       setLoading(false);
     }
     
